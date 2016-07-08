@@ -2,12 +2,12 @@
 
 import React from "react"
 import _ from "lodash"
-import { Form, Button, Alert, SplitButton, MenuItem, Modal } from "react-bootstrap"
+import { Form, Alert, SplitButton, MenuItem, Modal } from "react-bootstrap"
 import { hashHistory } from "react-router"
 
 import GhostButton from "lib/GhostButton"
 import SubmitButton from "lib/SubmitButton"
-import FacebookButton from "lib/SocialButton/FacebookButton"
+import SocialButton from "lib/SocialButton"
 import EmailInput from "./AuthApp/EmailInput"
 import UsernameInput from "./AuthApp/UsernameInput"
 import PasswordInput from "./AuthApp/PasswordInput"
@@ -279,7 +279,10 @@ export default class AuthApp extends React.Component {
       <div>
         <div className={styles.divider}>or</div>
         <div className={styles.socialButtonArea}>
-          <FacebookButton disabled={this.state.isLoggingIn || this.state.isSigningUp} />
+          <SocialButton 
+            type="facebook"
+            disabled={this.state.isLoggingIn || this.state.isSigningUp}
+         />
         </div>
       </div>
     );
@@ -298,7 +301,7 @@ export default class AuthApp extends React.Component {
         </Modal.Body>
         <Modal.Footer>
           {toggleModeMessage}
-          <Button onClick={this.toggleModal}>Close</Button>
+          <GhostButton onClick={this.toggleModal}>Close</GhostButton>
         </Modal.Footer>
       </Modal>
     );

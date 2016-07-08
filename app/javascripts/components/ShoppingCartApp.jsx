@@ -4,7 +4,7 @@ import React from "react"
 import _ from "lodash"
 
 import { Glyphicon, OverlayTrigger, Popover, MenuItem } from "react-bootstrap"
-import { Image, Button, SplitButton } from "react-bootstrap"
+import { Image, SplitButton } from "react-bootstrap"
 import { Grid, Row, Col } from "react-bootstrap"
 
 import CheckoutApp from "components/CheckoutApp"
@@ -12,6 +12,8 @@ import ShoppingCartStore from "stores/ShoppingCartStore"
 import AuthStore from "stores/AuthStore"
 import ShoppingCartAction from "actions/ShoppingCartAction"
 import ItemUtil from "utils/ItemUtil"
+
+import GhostButton from "lib/GhostButton"
 
 import styles from "components/ShoppingCartApp.scss"
 
@@ -166,8 +168,8 @@ export default class ShoppingCartApp extends React.Component {
         {displayItems}
         <div style={priceStyle}>Total: {ItemUtil.createPriceJsx(totalPrice)}</div>
         <div style={buttonGroupStyle}>
-          <Button style={clearCartButtonStyle} onClick={handleClearCart}>Clear cart</Button>
-          <Button disabled={checkoutDisabled} bsStyle="warning" href="#/checkout">Checkout</Button>
+          <GhostButton style={clearCartButtonStyle} onClick={handleClearCart}>Clear cart</GhostButton>
+          <GhostButton disabled={checkoutDisabled} theme="gold" href="#/checkout">Checkout</GhostButton>
         </div>
       </Popover>
     );
@@ -182,10 +184,10 @@ export default class ShoppingCartApp extends React.Component {
           trigger="focus" 
           placement="bottom" 
           overlay={popover}>
-          <Button className={styles.cartButton} bsStyle="warning">
+          <GhostButton className={styles.cartButton} theme="gold">
             <Glyphicon glyph="shopping-cart" />
             ({Object.keys(this.state.items).length})
-          </Button>
+          </GhostButton>
         </OverlayTrigger>
       </div>
     );

@@ -66,7 +66,7 @@ export default class OrderDetailModal extends React.Component {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <GhostButton inverse onClick={this.onClose}>Close</GhostButton>  
+          <GhostButton theme="black" onClick={this.onClose}>Close</GhostButton>  
         </Modal.Footer>
       </Modal>
     );

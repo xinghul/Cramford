@@ -15,8 +15,10 @@ export default class FontAwesomeButton extends React.Component {
 
   render() {
     
+    let theme = this.props.inverse ? "black" : "white";
+    
     return (
-      <GhostButton inverse={this.props.inverse} onClick={this.props.onClick} onMouseDown={this.props.onMouseDown}>
+      <GhostButton theme={theme} onClick={this.props.onClick} onMouseDown={this.props.onMouseDown}>
         <FontAwesome
           name={this.props.icon}
           inverse={this.props.inverse}

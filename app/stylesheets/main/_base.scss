@@ -13,3 +13,14 @@ body {
   -o-font-smoothing: antialiased;
   font-smoothing: antialiased;
 }
+
+:global(.btn) {
+  
+  border: 1px solid;
+
+  &:focus, &:active {
+    outline: none !important;
+    
+    border: 1px solid;
+  }
+}

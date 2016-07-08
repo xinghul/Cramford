@@ -22,7 +22,7 @@ import CompleteLocalApp from "components/CompleteLocalApp"
 import ResetPasswordApp from "components/ResetPasswordApp"
 import ForgotPasswordApp from "components/ForgotPasswordApp"
 
-import DraftEditor from "lib/DraftEditor"
+import GhostButton from "lib/GhostButton"
 
 import styles from "main/app.scss"
 
@@ -57,7 +57,6 @@ class IndexApp extends React.Component {
     
     return (
       <div>
-        <DraftEditor />
       </div>
     );
   }
