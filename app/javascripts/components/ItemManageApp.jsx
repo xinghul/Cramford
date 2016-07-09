@@ -77,7 +77,7 @@ export default class ItemManageApp extends React.Component {
                 tags={this.state.tags} 
               />
             </Col>
-            <Col md={6}>
+            <Col xs={12} md={6}>
               <ItemListTable 
                 items={this.state.items} 
                 handleItemClick={this.handleItemClick}

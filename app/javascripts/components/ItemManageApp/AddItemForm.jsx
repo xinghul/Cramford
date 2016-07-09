@@ -162,6 +162,7 @@ export default class AddItemForm extends React.Component {
     
     let submitButton = (
       <SubmitButton
+        theme="black"
         handleSubmit={this.handleSubmit}
         isSubmitting={this.state.isSubmitting}
       >Add new item</SubmitButton>

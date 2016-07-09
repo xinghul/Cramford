@@ -180,10 +180,10 @@ export default class AuthApp extends React.Component {
           <PasswordInput value={this.state.password} disabled={this.state.isLoggingIn} isRegister={false} handleChange={this.handlePasswordChange} />
         </Form>
         <SubmitButton
+          theme="green"
           disabled={disabled}
           handleSubmit={this.handleLoginClick}
           isSubmitting={this.state.isLoggingIn}
-          bsStyle="success"
           block
         >Log in</SubmitButton>
         <div className={styles.forgotPasswordLink}>
@@ -208,10 +208,10 @@ export default class AuthApp extends React.Component {
           <PasswordInput value={this.state.password} disabled={this.state.isSigningUp} isRegister={true} handleChange={this.handlePasswordChange} />
         </Form>
         <SubmitButton
+          theme="green"
           disabled={disabled}
           handleSubmit={this.handleSignupClick}
           isSubmitting={this.state.isSigningUp}
-          bsStyle="success"
           block
         >Sign up</SubmitButton>
       </div>
@@ -234,7 +234,7 @@ export default class AuthApp extends React.Component {
       let title = "Hello, " + username;
       
       authArea =
-        <SplitButton id="sign-in" title={title} bsStyle="default" pullRight>
+        <SplitButton id="sign-in" title={title} pullRight>
           <MenuItem href="#/account">My Account</MenuItem>
           <MenuItem divider />
           <MenuItem onSelect={this.handleLogOut}>Log out</MenuItem>

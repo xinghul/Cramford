@@ -7,18 +7,18 @@
 .white {
   color: white;
   border-color: white !important;
-  background-color: transparent; 
+  background-color: transparent !important; 
   
   &:hover {
     color: black;
-    background-color: white;
+    background-color: white !important;
   }
 }
 
 .grey {
   color: black;
   border-color: #ccc !important;
-  background-color: transparent;
+  background-color: transparent !important;
   
   &:hover {
     color: black;
@@ -29,21 +29,43 @@
 .black {
   color: black;
   border-color: black !important;
-  background-color: transparent;
+  background-color: transparent !important;
   
   &:hover {
     color: white;
-    background-color: black;
+    background-color: black !important;
   }  
 }
 
 .gold {
   color: white;
   border-color: #eea236 !important;
-  background-color: #f0ad4e;
+  background-color: #f0ad4e !important;
   
   &:hover {
     color: white;
-    background-color: #eea236;
+    background-color: #eea236 !important;
   }  
+}
+
+.green {
+  color: white;
+  border-color: #4cae4c !important;
+  background-color: #5cb85c !important;
+  
+  &:hover {
+    color: white;
+    background-color: #4cae4c !important;
+  }  
+}
+
+.red {
+  color: white;
+  border-color: #d43f3a !important;
+  background-color: #d9534f !important;
+  
+  &:hover {
+    color: white;
+    background-color: #d43f3a !important;
+  } 
 }

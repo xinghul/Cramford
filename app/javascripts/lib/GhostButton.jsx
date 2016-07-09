@@ -38,7 +38,7 @@ export default class GhostButton extends React.Component {
 }
 
 GhostButton.propTypes = {
-  theme: React.PropTypes.oneOf(["white", "grey", "black", "gold"])
+  theme: React.PropTypes.oneOf(["white", "grey", "black", "gold", "green", "red"])
 };
 
 GhostButton.defaultProps = {
