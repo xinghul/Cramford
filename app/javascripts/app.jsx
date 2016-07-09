@@ -34,6 +34,7 @@ class App extends React.Component {
         <NavbarApp />
         <ReactCSSTransitionGroup
           component="div"
+          className={styles.appContent}
           transitionName="route"
           transitionEnterTimeout={300}
           transitionLeaveTimeout={300}

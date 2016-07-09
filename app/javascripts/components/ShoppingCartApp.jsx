@@ -2,10 +2,10 @@
 
 import React from "react"
 import _ from "lodash"
+import { hashHistory } from "react-router"
 
 import { Glyphicon, OverlayTrigger, Popover, MenuItem } from "react-bootstrap"
 import { Image, SplitButton } from "react-bootstrap"
-import { Grid, Row, Col } from "react-bootstrap"
 
 import CheckoutApp from "components/CheckoutApp"
 import ShoppingCartStore from "stores/ShoppingCartStore"
@@ -138,7 +138,12 @@ export default class ShoppingCartApp extends React.Component {
     this.setState(getStateFromStores());
   };
   
+  _onCheckoutClick = () => {
+    hashHistory.push("/checkout");
+  };
+  
   createCartPopover() {
+    
     let items = this.state.items
     ,   displayItems = []
     ,   totalPrice = this.state.totalPrice
@@ -168,8 +173,8 @@ export default class ShoppingCartApp extends React.Component {
         {displayItems}
         <div style={priceStyle}>Total: {ItemUtil.createPriceJsx(totalPrice)}</div>
         <div style={buttonGroupStyle}>
-          <GhostButton style={clearCartButtonStyle} onClick={handleClearCart}>Clear cart</GhostButton>
-          <GhostButton disabled={checkoutDisabled} theme="gold" href="#/checkout">Checkout</GhostButton>
+          <GhostButton style={clearCartButtonStyle} theme="black" onClick={handleClearCart}>Clear cart</GhostButton>
+          <GhostButton disabled={checkoutDisabled} theme="gold" onClick={this._onCheckoutClick}>Checkout</GhostButton>
         </div>
       </Popover>
     );
