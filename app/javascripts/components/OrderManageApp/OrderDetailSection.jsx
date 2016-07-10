@@ -56,13 +56,13 @@ export default class OrderDetailSection extends React.Component {
     return (
       <div className={styles.actionButtons}>
         <SubmitButton 
-          theme="gold" 
+          theme="warning" 
           disabled={order.stripe.captured || buttonDisabled}
           isSubmitting={this.state.isTakingPayment}
           handleSubmit={this.handleTakePayment}
         >Take payment</SubmitButton>
         <SubmitButton 
-          theme="green"
+          theme="success"
           disabled={order.sent || buttonDisabled}
           isSubmitting={this.state.isSendingOrder}
           handleSubmit={this.handleSendOrder}

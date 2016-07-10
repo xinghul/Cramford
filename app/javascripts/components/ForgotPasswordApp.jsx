@@ -89,7 +89,7 @@ export default class ForgotPasswordApp extends React.Component {
               disabled={disabled}
               handleSubmit={this.handleSubmitClick}
               isSubmitting={this.state.isSubmitting}
-              theme="green"
+              theme="success"
             >Submit</SubmitButton>
           </div>
         </div>

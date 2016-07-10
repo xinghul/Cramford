@@ -51,7 +51,7 @@ export default class BaseItem extends React.Component {
       <div style={bannerStyle} className={styles.baseBanner}>
         <div className={styles.itemName}>{item.name}</div>
         <div className={styles.cartIcon} onClick={this.handleAddToCartClick}>
-          <GhostButton theme="gold" bsSize="xsmall">
+          <GhostButton theme="warning" bsSize="xsmall">
             <Glyphicon glyph="shopping-cart" />
             Add to cart
           </GhostButton>

@@ -42,7 +42,7 @@ export default class NarbarApp extends React.Component {
               Furnitures
             </NavItem>
             <NavItem href="#/itemManage">
-              CMS
+              Items
             </NavItem>
             <NavItem href="#/orderManage">
               Orders

@@ -122,7 +122,7 @@ export default class ItemDetailModal extends React.Component {
         </Modal.Body>
         <Modal.Footer>
           <SubmitButton 
-            theme="red" 
+            theme="danger" 
             disabled={buttonDisabled}
             isSubmitting={this.state.isDeleting}
             handleSubmit={this.handleDelete}

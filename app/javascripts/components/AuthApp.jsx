@@ -180,7 +180,7 @@ export default class AuthApp extends React.Component {
           <PasswordInput value={this.state.password} disabled={this.state.isLoggingIn} isRegister={false} handleChange={this.handlePasswordChange} />
         </Form>
         <SubmitButton
-          theme="green"
+          theme="success"
           disabled={disabled}
           handleSubmit={this.handleLoginClick}
           isSubmitting={this.state.isLoggingIn}
@@ -208,7 +208,7 @@ export default class AuthApp extends React.Component {
           <PasswordInput value={this.state.password} disabled={this.state.isSigningUp} isRegister={true} handleChange={this.handlePasswordChange} />
         </Form>
         <SubmitButton
-          theme="green"
+          theme="success"
           disabled={disabled}
           handleSubmit={this.handleSignupClick}
           isSubmitting={this.state.isSigningUp}
@@ -301,7 +301,7 @@ export default class AuthApp extends React.Component {
         </Modal.Body>
         <Modal.Footer>
           {toggleModeMessage}
-          <GhostButton onClick={this.toggleModal}>Close</GhostButton>
+          <GhostButton theme="black" onClick={this.toggleModal}>Close</GhostButton>
         </Modal.Footer>
       </Modal>
     );

@@ -174,7 +174,7 @@ export default class ShoppingCartApp extends React.Component {
         <div style={priceStyle}>Total: {ItemUtil.createPriceJsx(totalPrice)}</div>
         <div style={buttonGroupStyle}>
           <GhostButton style={clearCartButtonStyle} theme="black" onClick={handleClearCart}>Clear cart</GhostButton>
-          <GhostButton disabled={checkoutDisabled} theme="gold" onClick={this._onCheckoutClick}>Checkout</GhostButton>
+          <GhostButton disabled={checkoutDisabled} theme="warning" onClick={this._onCheckoutClick}>Checkout</GhostButton>
         </div>
       </Popover>
     );

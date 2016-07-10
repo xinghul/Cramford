@@ -48,24 +48,44 @@
   }  
 }
 
-.green {
-  color: white;
-  border-color: #4cae4c !important;
-  background-color: #5cb85c !important;
+.success {
+  background-color: white !important;
+
+  color: rgba(76, 174, 76, 1);
+  border-color: rgba(76, 174, 76, 1) !important;
   
   &:hover {
+    background-color: rgba(76, 174, 76, 1) !important;
+    
     color: white;
-    background-color: #4cae4c !important;
+    border-color: rgba(76, 174, 76, 1) !important;
   }  
 }
 
-.red {
-  color: white;
-  border-color: #d43f3a !important;
-  background-color: #d9534f !important;
+.warning {
+  background-color: white !important;
+
+  color: rgba(238, 162, 54, 1);
+  border-color: rgba(238, 162, 54, 1) !important;
   
   &:hover {
+    background-color: rgba(238, 162, 54, 1) !important;
+    
     color: white;
-    background-color: #d43f3a !important;
+    border-color: rgba(238, 162, 54, 1) !important;
+  } 
+}
+
+.danger {
+  background-color: white !important;
+  
+  color: rgba(217, 83, 79, 1);
+  border-color: rgba(217, 83, 79, 1) !important;
+
+  &:hover {
+    background-color: rgba(217, 83, 79, 1) !important;
+    
+    color: white;
+    border-color: rgba(217, 83, 79, 1) !important;
   } 
 }
