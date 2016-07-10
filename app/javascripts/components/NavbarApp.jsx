@@ -34,7 +34,7 @@ export default class NarbarApp extends React.Component {
               <Image className={styles.brandImg} alt="Cromford" src="/images/logo.png" />
             </a>
           </Navbar.Brand>
-          <Navbar.Toggle />
+          <Navbar.Toggle className={styles.toggle} />
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav>
